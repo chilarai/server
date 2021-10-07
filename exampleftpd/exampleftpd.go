@@ -10,7 +10,7 @@ import (
 	"flag"
 	"log"
 
-	filedriver "github.com/chilarai/file-driver"
+	filedriver "github.com/chilarai/server/file-driver"
 	"github.com/chilarai/server"
 )
 
