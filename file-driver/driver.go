@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/goftp/server"
+	"github.com/chilarai/server"
 )
 
 type FileDriver struct {
