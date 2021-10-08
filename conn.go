@@ -159,7 +159,6 @@ func (conn *Conn) upgradeToTLS() error {
 // appropriate response.
 func (conn *Conn) receiveLine(line string) {
 	command, param := conn.parseLine(line)
-	fmt.Println(command, "-", param, "COMM", commands)
 	conn.logger.PrintCommand(conn.sessionID, command, param)
 	cmdObj := commands[strings.ToUpper(command)]
 	if cmdObj == nil {

@@ -893,7 +893,7 @@ func (cmd commandHelp) RequireAuth() bool {
 }
 
 func (cmd commandHelp) Execute(conn *Conn, param string) {
-	conn.writeMessage(250, "Help dummy")
+	conn.writeMessage(250, "Help Command")
 }
 
 type commandAdat struct{}
