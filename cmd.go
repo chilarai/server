@@ -68,7 +68,7 @@ var (
 		"XMKD": commandMkd{},
 		"XPWD": commandPwd{},
 		"XRMD": commandRmd{},
-		"HELP": commandAdat{},
+		"HELP": commandHelp{},
 	}
 )
 
@@ -874,6 +874,26 @@ func (cmd commandRmd) Execute(conn *Conn, param string) {
 	} else {
 		conn.writeMessage(550, fmt.Sprint("Directory delete failed: ", err))
 	}
+}
+
+// cmdHelp responds to the HELP FTP command. It allows the client to see help
+// directory.
+type commandHelp struct{}
+
+func (cmd commandHelp) IsExtend() bool {
+	return false
+}
+
+func (cmd commandHelp) RequireParam() bool {
+	return false
+}
+
+func (cmd commandHelp) RequireAuth() bool {
+	return false
+}
+
+func (cmd commandHelp) Execute(conn *Conn) {
+	conn.writeMessage(250, "Help dummy")
 }
 
 type commandAdat struct{}
