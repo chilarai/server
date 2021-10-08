@@ -68,6 +68,7 @@ var (
 		"XMKD": commandMkd{},
 		"XPWD": commandPwd{},
 		"XRMD": commandRmd{},
+		"HELP": commandAdat{},
 	}
 )
 

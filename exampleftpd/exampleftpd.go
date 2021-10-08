@@ -16,11 +16,11 @@ import (
 
 func main() {
 	var (
-		root = flag.String("root", "", "Root directory to serve")
+		root = flag.String("root", "/home/chilarai/grafieks-api-1.1/data", "Root directory to serve")
 		user = flag.String("user", "admin", "Username for login")
 		pass = flag.String("pass", "123456", "Password for login")
 		port = flag.Int("port", 2121, "Port")
-		host = flag.String("host", "localhost", "Host")
+		host = flag.String("host", "172.24.93.227", "Host")
 	)
 	flag.Parse()
 	if *root == "" {
