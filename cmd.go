@@ -892,7 +892,7 @@ func (cmd commandHelp) RequireAuth() bool {
 	return false
 }
 
-func (cmd commandHelp) Execute(conn *Conn) {
+func (cmd commandHelp) Execute(conn *Conn, param string) {
 	conn.writeMessage(250, "Help dummy")
 }
 
